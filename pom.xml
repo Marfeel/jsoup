@@ -229,7 +229,7 @@
     </resources>
   </build>
 
-  <distributionManagement>
+  <!-- distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
@@ -240,7 +240,18 @@
       <name>Nexus Release Repository</name>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
-  </distributionManagement>
+  </distributionManagement -->
+
+   <distributionManagement>
+        <repository>
+            <id>marfeel-private</id>
+            <url>${repo-url-private}</url>
+        </repository>
+        <snapshotRepository>
+            <id>marfeel-snapshot-private</id>
+            <url>${repo-url-snapshot-private}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <profiles>
     <profile>
